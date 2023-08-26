@@ -15,22 +15,19 @@ sensor:
       inverted: true
     current:
       name: "${friendly_name}: Current"
-      id: ${name}_current
       unit_of_measurement: A
       accuracy_decimals: 3
     voltage:
       name: "${friendly_name}: Voltage"
-      id: ${name}_voltage
       unit_of_measurement: V
       accuracy_decimals: 0
     power:
       name: "${friendly_name}: Power"
-      id: ${name}_power
+      id: power
       unit_of_measurement: W
       accuracy_decimals: 0
     energy:
       name: "${friendly_name}: Energy"
-      id: ${name}_energy
       unit_of_measurement: Wh
     voltage_divider: 2182
     current_resistor: 0.0009356
@@ -39,7 +36,7 @@ sensor:
 
   - platform: total_daily_energy
     name: "${friendly_name}: Total Daily Energy"
-    power_id: ${name}_power
+    power_id: power
     unit_of_measurement: Wh
 
 binary_sensor:
